@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Unclaimed Financial Assets Authority</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="zero_results_found">Zero results found.</string>
+    <string name="search_successful">Search successful.</string>
+    <string name="address_pacis_centre_2nd_floor_slip_road_off_waiyaki_way_westlands_nairobi">Address: Pacis Centre, 2nd Floor, Slip Road, Off Waiyaki Way, Westlands, Nairobi</string>
+    <string name="call_020_4023000_0706866984_0736559152">Call: 020 4023000, 0706866984, 0736559152</string>
+    <string name="mail_info_ufaa_go_ke">Mail: info@ufaa.go.ke</string>
+    <string name="search_by_id2">Search by ID</string>
+    <string name="search_by_name7">Search by Name</string>
+    <string name="dbname">UFAMS</string>
+    <string name="usrname">adminapp</string>
+    <string name="psswrd">Andr01d!</string>
+    <string name="prt">1433</string>
+    <string name="ip">10.80.10.108</string>
+    <string name="resend_otp_message">Resend OTP in %1$d seconds</string>
+    <string name="otp">OTP</string>
+    <string name="resend_otp_in_30_sec">Resend OTP in 30 sec</string>
+    <string name="enter_otp_sent_to_your_phone_number">Enter OTP sent to your phone number</string>
+    <string name="_3">3</string>
+    <string name="_2">2</string>
+    <string name="_1">1</string>
+    <string name="next">NEXT</string>
+
+    <string name="zero_results_foundd">Zero results found.</string>
+
+</resources>

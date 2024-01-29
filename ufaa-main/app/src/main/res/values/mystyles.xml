@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/values/styles.xml -->
+<resources>
+    <style name="GradientButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/next_gradient_background</item>
+        <item name="android:textColor">@color/white</item>
+        <!-- Add other custom attributes if needed -->
+    </style>
+    <style name="GradientButtonStyle2" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/previous_gradient_background</item>
+        <item name="android:textColor">@color/white</item>
+        <!-- Add other custom attributes if needed -->
+    </style>
+    <style name="GradientButtonStyle3" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/search_gradient_background</item>
+        <item name="android:textColor">@color/white</item>
+        <!-- Add other custom attributes if needed -->
+    </style>
+</resources>

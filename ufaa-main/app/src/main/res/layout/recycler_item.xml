@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="@drawable/row_separator">
+    <TextView
+        android:id="@+id/rowNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         />
+
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+<!--    <View-->
+<!--        android:layout_width="1dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/ufaa_dark"/>-->
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Name" />
+<!--    <View-->
+<!--        android:layout_width="1dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/ufaa_dark"/>-->
+    <TextView
+        android:id="@+id/myidnumberTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="ID Num." />
+
+    <TextView
+        android:id="@+id/holderTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Holder" />
+<!--    <View-->
+<!--        android:layout_width="1dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/ufaa_dark"/>-->
+
+    <TextView
+        android:id="@+id/amountTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Amount(KSH)" />
+<!--    <View-->
+<!--        android:layout_width="1dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/ufaa_dark"/>-->
+    <TextView
+        android:id="@+id/boxTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="P.O BOX" />
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Status" />
+</LinearLayout>

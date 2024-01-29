@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "984309563771",
+    "project_id": "ufaa-app-13f4c",
+    "storage_bucket": "ufaa-app-13f4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984309563771:android:8356acd8b3c0703732bdde",
+        "android_client_info": {
+          "package_name": "com.example.ufaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "984309563771-uaq09qe7k1b0qkrtgse425kd3oiq6r81.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRsUmSeTN0uxdOq9181Spokc1DZ_CeOKQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "984309563771-uaq09qe7k1b0qkrtgse425kd3oiq6r81.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

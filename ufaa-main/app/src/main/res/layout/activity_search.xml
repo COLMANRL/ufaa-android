@@ -1,0 +1,319 @@
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/drawer_layout"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<com.example.ufaapp.CustomScrollView
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewLogo4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:layout_alignParentTop="true" />
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:visibility="invisible"
+            android:layout_below="@id/imageViewLogo4" />
+
+        <!-- Rest of your layout content goes here, starting with LinearLayout id/editTextLayout -->
+        <!-- Make sure to use android:layout_below="@id/imageViewLogo4" for the first element after the ImageView -->
+        <LinearLayout
+            android:id="@+id/editTextLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageViewLogo4"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textViewSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:layout_marginTop="16dp"
+                android:textColor="#171c6d"/>
+
+            <EditText
+                android:id="@+id/editTextSearch"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:inputType="text"
+                android:hint="Enter ID or Name"
+                android:textColor="#171c6d"
+                android:textColorHint="#171c6d"/>
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchButtonsLayout"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/editTextLayout"
+            android:padding="8dp">
+
+            <!-- Search by ID Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/searchByIdButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/GradientButtonStyle3"
+                app:backgroundTint="@color/golden_to_blue"
+                android:visibility="gone"
+                android:drawableLeft="@drawable/icon_search"
+                android:text="@string/search_by_id2"
+                android:drawablePadding="8dp"
+                android:textColor="#FFFFFF"
+                android:elevation="2dp" />
+
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="0dp" />
+
+            <!-- Search by Name Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/searchByNameButton"
+                style="@style/GradientButtonStyle3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/search_by_name7"
+                android:drawableLeft="@drawable/icon_search"
+                android:drawablePadding="8dp"
+                app:backgroundTint="@color/golden_to_blue"
+
+                android:visibility="gone"
+                android:textColor="#FFFFFF"
+                android:elevation="2dp" />
+
+        </LinearLayout>
+
+
+        <!-- Search status text -->
+        <TextView
+            android:id="@+id/searchStatusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:visibility="gone" />
+
+        <!-- Wrap the TableLayout in a HorizontalScrollView -->
+        <!-- Wrap the TableLayout and Load More Button in a vertical LinearLayout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchButtonsLayout"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+
+
+            <!-- Load More Button -->
+
+            <!-- Wrap the TableLayout in a CardView -->
+            <TextView
+                android:id="@+id/totalRowsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:text=""
+                android:textColor="#333333"
+                android:textSize="16sp"
+                android:visibility="gone"
+                />
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/searchResultsRecyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingBottom="16dp"
+                    android:scrollbars="vertical"
+                    android:layout_below="@+id/selectedRowsTextView"/>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/selectedRowsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clickable="false"
+                android:textColor="#171c6d"
+                />
+            <!-- Add this TextView where you want to display the page number -->
+            <TextView
+                android:id="@+id/pageNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text=""
+                android:textColor="#333333"
+                android:textSize="16sp"
+                android:visibility="visible"
+                android:layout_below="@+id/totalRowsTextView"/>
+
+
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                         />
+
+                </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/previousButton"
+                    style="@style/GradientButtonStyle2"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="&lt;&lt;Previous"
+                    app:backgroundTint="@color/golden_to_blue"
+                    android:textColor="#FFFFFF"
+                    android:visibility="gone"
+                    android:elevation="2dp"
+
+                    />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="0dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/nextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Next&gt;&gt;"
+                    app:backgroundTint="@color/golden_to_blue"
+
+                    android:textColor="#FFFFFF"
+                    android:visibility="gone"
+
+                    android:elevation="2dp"
+                    style="@style/GradientButtonStyle"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="30dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/ufaa_dark"
+                android:elevation="4dp"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <Button
+                    android:id="@+id/downloadButton"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="0dp"
+                    android:text="Download pdf"
+                    android:textColor="#ffffff"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/save_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:contentDescription="download icon"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/download_icon"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/person_icon"
+                    android:scaleType="centerCrop"
+                    android:padding="1dp"
+                    android:contentDescription="profile" />
+
+                <Button
+                    android:id="@+id/profileButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:textColor="#171c6d"
+                    android:background="?android:selectableItemBackground" /> <!-- Optional: Adds a ripple effect on click -->
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</com.example.ufaapp.CustomScrollView>
+
+<FrameLayout
+    android:id="@+id/nav_drawer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end">
+    <!-- Include your drawer profile layout here -->
+    <include layout="@layout/drawer_activity_profile"/>
+</FrameLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

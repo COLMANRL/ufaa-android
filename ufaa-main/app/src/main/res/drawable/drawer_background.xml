@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background image -->
+    <item>
+        <bitmap
+            android:src="@drawable/ufaaback"
+            android:scaleType="centerCrop"
+            android:tileMode="disabled" />
+    </item>
+    <!-- Overlay for opacity -->
+    <item>
+        <color
+            android:color="#73000000" /> <!-- Adjust the opacity with the alpha value here (#CC) -->
+    </item>
+</layer-list>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="my_primary">#171c6d</color>
+    <color name="my_secondary">#252561</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="off_white">#FAFAFA</color>
+    <color name="light_gray">#C3C3C3</color>
+
+    <color name="ufaa_dark">#171c6d</color>
+    <color name="golden">#c9953f</color>
+    <color name="teal">#00796B</color>
+    <color name="golden_to_blue" colorList="#c9953f,#00796B,#3F51B5" />
+
+</resources>
